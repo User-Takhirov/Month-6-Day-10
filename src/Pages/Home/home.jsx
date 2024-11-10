@@ -10,12 +10,14 @@ import {
 import React from "react";
 import { useGetPhoneProducts } from "../../Service/Query/useGetPhoneProducts";
 import { Card } from "../../components/Card/card";
+import { PhoneSearch } from "../../components/usePhoneSearch/usePhoneSearch";
 export const Home = () => {
   const [page, setPage] = React.useState(1);
   const { data, isLoading } = useGetPhoneProducts(page);
 
   return (
     <>
+      <PhoneSearch />
       <Container maxWidth={"lg"}>
         <Box>
           {isLoading ? (

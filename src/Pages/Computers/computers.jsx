@@ -3,6 +3,7 @@ import React from "react";
 import { useGetCompProducts } from "../../Service/Query/useGetCompProduct";
 import { Card } from "../../components/Card/card";
 import { useInView } from "react-intersection-observer";
+import { CompSearch } from "../../components/useCompSearch/useCompSearch";
 
 export const Computers = () => {
   const { data, isLoading, fetchNextPage, hasNextPage } = useGetCompProducts();
@@ -14,6 +15,8 @@ export const Computers = () => {
   }, [inView]);
   return (
     <>
+      <CompSearch />
+
       <Container sx={{ mb: "50px" }}>
         {isLoading ? (
           <Box>

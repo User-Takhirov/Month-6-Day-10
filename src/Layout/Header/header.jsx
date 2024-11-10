@@ -2,6 +2,7 @@ import { Box, Container, Stack, Typography } from "@mui/material";
 import { blue } from "@mui/material/colors";
 import React from "react";
 import { Link } from "react-router-dom";
+import { CompSearch } from "../../components/useCompSearch/useCompSearch";
 
 export const Header = () => {
   return (
